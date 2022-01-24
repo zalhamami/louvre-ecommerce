@@ -130,7 +130,7 @@ class CartController extends Controller
             });
 
             if (!auth()->guard('customer')->check()) {
-                $password = Str::random(8);
+                $password = 'secret';
                 $customer = Customer::create([
                     'name' => $request->customer_name,
                     'email' => $request->email,
